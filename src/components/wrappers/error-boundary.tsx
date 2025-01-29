@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { Button } from '../ui/button';
 
 type ErrorBoundaryState = {
   hasError: boolean;
@@ -34,15 +35,13 @@ export class ErrorBoundary extends Component<
       return (
         <div className="p-4 bg-red-100 text-red-700 rounded-md">
           <h1 className="text-xl font-bold">Something went wrong.</h1>
-          <button
-            onClick={this.handleReset}
-            className="mt-2 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
-          >
+          <Button variant="danger" className="mt-4" onClick={this.handleReset}>
             Try Again
-          </button>
+          </Button>
         </div>
       );
     }
+
     return this.props.children;
   }
 }

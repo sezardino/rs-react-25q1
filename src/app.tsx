@@ -2,6 +2,7 @@ import { AxiosError } from 'axios';
 import { Component } from 'react';
 import { api } from './api';
 import { Character } from './api/characters/types';
+import { ErrorButton } from './components/ui/error-button';
 import { Loader } from './components/ui/loader';
 import { ResultCard } from './components/ui/result-card';
 import { SearchForm } from './components/ui/search-form';
@@ -84,6 +85,8 @@ export class App extends Component<Record<string, never>, AppState> {
               ))}
             </ul>
           )}
+
+          <ErrorButton className="mt-10 mx-auto" />
         </section>
       </main>
     );

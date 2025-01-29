@@ -1,4 +1,5 @@
 import { Component, FormEvent } from 'react';
+import { Button } from './button';
 
 type SearchProps = {
   onSearch: (value: string) => void;
@@ -40,12 +41,7 @@ export class SearchForm extends Component<SearchProps, SearchState> {
           placeholder="Enter search term"
           className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
-        <button
-          type="submit"
-          className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
-        >
-          Search
-        </button>
+        <Button type="submit">Search</Button>
       </form>
     );
   }
